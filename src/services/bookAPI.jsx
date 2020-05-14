@@ -24,11 +24,11 @@ export const postBook = book => {
 export const fetchBooks = () => {
   return fetch(`${process.env.API_URL}/api/v1/books`)
     .then(res => res.json())
-    .then(json => ({
-      _id: json._id,
-      author: json.authorId.name,
-      title: json.title,
-      genre: json.genre,
-      pages: json.pages
-    }));
+    .then(json => json.map(book => ({
+      _id: book._id,
+      author: book.authorId.name,
+      title: book.title,
+      genre: book.genre,
+      pages: book.pages
+    })));
 };

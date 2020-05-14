@@ -21,10 +21,6 @@ const BookForm = () => {
             dispatch(addBook(book));
           });
       });
-    // send back end a post request to create the author (make service)
-    // get response and grab authorId
-    // send back end a post request to create book (make service)
-    // once we receive a response, add book to redux (make reducer, action and selectors)
   };
 
   return (
