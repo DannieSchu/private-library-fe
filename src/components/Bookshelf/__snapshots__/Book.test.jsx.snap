@@ -6,6 +6,9 @@ exports[`Book component renders Book 1`] = `
     The Idiot
   </h3>
   <p>
+    Author: 
+  </p>
+  <p>
     Genre: 
     Literature
   </p>
