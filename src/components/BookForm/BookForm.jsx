@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { postAuthor, postBook } from '../../services/bookAPI';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../actions/booksActions';
 
 const BookForm = () => {
+  const dispatch = useDispatch();
+
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [pages, setPages] = useState(null);
@@ -14,7 +18,7 @@ const BookForm = () => {
       .then(authorId => {
         postBook({ authorId, title, genre, pages })
           .then(book => {
-
+            dispatch(addBook(book));
           });
       });
     // send back end a post request to create the author (make service)
