@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookForm component renders BookForm 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Author"
+    type="text"
+    value=""
+  />
+  <input
+    onChange={[Function]}
+    placeholder="Title"
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="genre"
+  >
+    Genre:
+  </label>
+  <select
+    id="genre"
+    onChange={[Function]}
+  >
+    <option
+      value="literature"
+    >
+      Literature
+    </option>
+    <option
+      value="science fiction"
+    >
+      Science Fiction
+    </option>
+    <option
+      value="horror"
+    >
+      Horror
+    </option>
+    <option
+      value="satire"
+    >
+      Satire
+    </option>
+  </select>
+  <input
+    min={0}
+    onChange={[Function]}
+    placeholder="Page count"
+    type="number"
+    value={null}
+  />
+  <button>
+    Add to Shelf
+  </button>
+</form>
+`;
