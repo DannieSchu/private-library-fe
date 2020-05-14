@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { postAuthor, postBook } from '../../services/bookAPI';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -8,6 +9,14 @@ const BookForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+
+    postAuthor(author)
+      .then(authorId => {
+        postBook({ authorId, title, genre, pages })
+          .then(book => {
+
+          });
+      });
     // send back end a post request to create the author (make service)
     // get response and grab authorId
     // send back end a post request to create book (make service)

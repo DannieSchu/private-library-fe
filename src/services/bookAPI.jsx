@@ -1,11 +1,22 @@
-export const postAuthor = authorName => {
+export const postAuthor = author => {
   return fetch(`${process.env.API_URL}/api/v1/authors`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(authorName)
+    body: JSON.stringify({ name: author })
   })
     .then(res => res.json())
     .then(json => json._id);
+};
+
+export const postBook = book => {
+  return fetch(`${process.env.API_URL}/api/v1/books`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(book)
+  })
+    .then(res => res.json());
 };
