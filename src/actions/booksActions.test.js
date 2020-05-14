@@ -26,13 +26,13 @@ describe('books actions', () => {
     const action = setBooks([{
       _id: 'f4fvfwev',
       title: 'Mansfield Park',
-      authorId: 'fwegew09vjos',
+      author: 'fwegew09vjos',
       genre: 'literature',
       pages: 325
     }, {
       _id: 'gvwej09jivo',
       title: 'Pride and Prejudice',
-      authorId: 'fwegew09vjos',
+      author: 'fwegew09vjos',
       genre: 'literature',
       pages: 325
     }]);
@@ -42,13 +42,13 @@ describe('books actions', () => {
       payload: [{
         _id: 'f4fvfwev',
         title: 'Mansfield Park',
-        authorId: 'fwegew09vjos',
+        author: 'fwegew09vjos',
         genre: 'literature',
         pages: 325
       }, {
         _id: 'gvwej09jivo',
         title: 'Pride and Prejudice',
-        authorId: 'fwegew09vjos',
+        author: 'fwegew09vjos',
         genre: 'literature',
         pages: 325
       }]

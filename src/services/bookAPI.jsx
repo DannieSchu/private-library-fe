@@ -20,3 +20,15 @@ export const postBook = book => {
   })
     .then(res => res.json());
 };
+
+export const fetchBooks = () => {
+  return fetch(`${process.env.API_URL}/api/v1/books`)
+    .then(res => res.json())
+    .then(json => ({
+      _id: json._id,
+      author: json.authorId.name,
+      title: json.title,
+      genre: json.genre,
+      pages: json.pages
+    }));
+};
