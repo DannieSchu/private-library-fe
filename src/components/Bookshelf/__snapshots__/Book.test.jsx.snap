@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book component renders Book 1`] = `
+<section>
+  <h3>
+    The Idiot
+  </h3>
+  <p>
+    Author: 
+  </p>
+  <p>
+    Genre: 
+    Literature
+  </p>
+  <p>
+    Number of pages: 
+    450
+  </p>
+</section>
+`;
